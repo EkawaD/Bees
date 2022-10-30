@@ -1,0 +1,218 @@
+
+
+.main {
+    --primary: teal;
+    height: 1456px;
+    width: 1044px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 210px 0.25fr 2fr 0.25fr;
+    font-family: "DejaVu Sans", "Arial", sans-serif;
+}
+
+.main a {
+    text-decoration: none;
+    color: black;
+}
+
+.main span {
+    color: var(--primary);
+
+}
+
+.intro, .skills, .hobby {
+    grid-column: span 2;
+}
+ 
+ /* HEADER */
+
+.intro {
+    display: grid;
+    grid-template-columns: 0.5fr 1.2fr 1.8fr;
+    padding-right: 1rem;
+    border-bottom: 10px solid black;
+}
+
+.intro ul {
+    margin: 2rem;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.intro li {
+    list-style: none;
+    margin: 0.5rem;
+}
+
+.about {
+    margin: 1rem;
+    text-align: justify;
+}
+
+.about h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.pp {
+    width: 250px;
+    z-index: -1;
+    padding: 0;
+    clip-path: polygon(0 0, 0 500px, 250px 0px, 100px 0);
+}
+
+
+ /* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: whitesmoke;
+}
+
+.skills h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--primary);
+}
+
+
+.tags {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 0.5rem;
+    color: gray;
+    justify-items: center;
+    
+}
+.tags li {
+    height: 1.2rem;
+    width: 5rem;
+    text-align: center;
+    font-size: 0.76rem;
+    padding: 0.5rem 0.8rem;
+	margin: 0.5rem;
+	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.25);
+	
+}
+
+.icon {
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+    font-size: 16px;
+    color: var(--primary)
+}
+
+.softskill .tags {
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+.softskill li {
+    width: 7.5rem;
+    padding: 1rem;
+}
+
+.softskill, .techskill {
+    margin: 1rem 0;
+    
+}
+.softskill {
+    border-left: 2px dashed black ;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .softskill {
+        display: none;
+    }
+}
+ /* BODY */
+
+ .experiences, .diplomes {
+    margin-top: 1.2rem;
+ }
+
+ 
+ .experiences h1, .diplomes h1{
+     margin-left: 2rem;
+     margin-bottom: 4rem;
+     font-size: 1.5rem;
+     max-width: 20vh;
+     
+}
+    
+.experiences h1 span, .diplomes h1 span {
+    color: white;
+    letter-spacing: 0.2rem;
+    -webkit-text-stroke: 1px var(--primary);
+}
+    
+
+.experiences .job {
+    margin: 2rem;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.experiences .job div:nth-child(3) {
+    grid-column: span 2;
+    text-align: justify;
+}
+
+.diplomes {
+    border-left: 2px dashed var(--primary);
+}
+.diplomes .job {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+}
+
+.job h2, .job h3 {
+    margin: 0;
+    padding: 0;
+
+}
+
+.job h2 {
+    font-size: 20px;
+}
+
+.job h3 {
+    color: var(--primary)
+}
+
+.jobInfo {
+    text-align: right;
+}
+
+.hobby {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--primary);
+    padding: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+    border-top: 5px solid black;
+}
+
+
+.hobby li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 4rem;
+}
+
+.hobby svg {
+    padding: 0.5rem;
+    font-size: 40px;
+}
